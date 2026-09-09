@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'layouts/header.html' %}
+
+<body>
+
+    {% include 'layouts/topbar.html' %}
+
+    {% include 'layouts/navbar.html' %}
+
+    {% include 'layouts/search_overlay.html' %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% include 'layouts/menu_popup.html' %}
+
+    {% include 'layouts/gallery_popup.html' %}
+
+    {% include 'layouts/footer.html' %}
+
+    {% include 'layouts/scripts.html' %}
+
+</body>
+</html>

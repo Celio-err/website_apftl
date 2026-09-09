@@ -1,0 +1,59 @@
+{% load static %}
+<div id="searchOv">
+         <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
+         <div class="sovbox">
+            <h4>What are you craving today?</h4>
+            <div class="sovinput">
+               <input type="text" id="searchInput" placeholder="Search burgers, pizza, chicken..." autocomplete="off"/>
+               <button><i class="fas fa-search"></i></button>
+            </div>
+            <!-- Categories inside search box -->
+ <div class="sovcats">
+
+            <div class="sovcat active" data-cat="all">
+                <img src="{% static 'main_front_end/img/menu/1.jpg' %}" alt="All Items">
+                <span>All Items</span>
+            </div>
+
+            <div class="sovcat" data-cat="burgers">
+                <img src="{% static 'main_front_end/img/menu/1.jpg' %}" alt="Burgers">
+                <span>Burgers</span>
+            </div>
+
+            <div class="sovcat" data-cat="pizza">
+                <img src="{% static 'main_front_end/img/menu/2.jpg' %}" alt="Pizza">
+                <span>Pizza</span>
+            </div>
+
+            <div class="sovcat" data-cat="chicken">
+                <img src="{% static 'main_front_end/img/menu/3.jpg' %}" alt="Chicken">
+                <span>Chicken</span>
+            </div>
+
+            <div class="sovcat" data-cat="wraps">
+                <img src="{% static 'main_front_end/img/menu/4.jpg' %}" alt="Wraps">
+                <span>Wraps</span>
+            </div>
+
+            <div class="sovcat" data-cat="pasta">
+                <img src="{% static 'main_front_end/img/menu/5.jpg' %}" alt="Pasta">
+                <span>Pasta</span>
+            </div>
+
+            <div class="sovcat" data-cat="desserts">
+                <img src="{% static 'main_front_end/img/menu/6.jpg' %}" alt="Desserts">
+                <span>Desserts</span>
+            </div>
+
+        </div>
+            <div class="sovtrend">
+               <p><i class="fas fa-fire me-1" style="color:var(--secondary);"></i>Trending Searches</p>
+               <span class="ttag">Smash Burger</span>
+               <span class="ttag">Nashville Chicken</span>
+               <span class="ttag">Truffle Pizza</span>
+               <span class="ttag">Lava Cake</span>
+               <span class="ttag">Loaded Fries</span>
+               <span class="ttag">Mango Shake</span>
+            </div>
+         </div>
+      </div>
