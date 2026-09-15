@@ -51,56 +51,6 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 });
 
 
-var searchOv = document.getElementById('searchOv');
-
-document.getElementById('navSearchBtn').addEventListener('click', function() {
-    searchOv.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    setTimeout(function() {
-        document.getElementById('searchInput').focus();
-    }, 220);
-});
-
-document.getElementById('searchClose').addEventListener('click', closeSearch);
-
-// Close when clicking backdrop
-searchOv.addEventListener('click', function(e) {
-    if (e.target === searchOv) closeSearch();
-});
-
-function closeSearch() {
-    searchOv.classList.remove('open');
-    document.body.style.overflow = '';
-}
-
-// Category buttons inside search box
-document.querySelectorAll('.sovcat').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        document.querySelectorAll('.sovcat').forEach(function(b) {
-            b.classList.remove('active');
-        });
-        this.classList.add('active');
-        var f = this.getAttribute('data-cat');
-        closeSearch();
-        setTimeout(function() {
-            filterMenu(f);
-            document.getElementById('menu').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }, 300);
-    });
-});
-
-// Trending tags fill the search input
-document.querySelectorAll('.sovtrend .ttag').forEach(function(t) {
-    t.addEventListener('click', function() {
-        document.getElementById('searchInput').value = this.textContent.trim();
-        document.getElementById('searchInput').focus();
-    });
-});
-
-
 $(document).ready(function() {
 	$('.magnific_popup').magnificPopup({
 	  disableOn: 700,
@@ -349,13 +299,14 @@ document.getElementById('gpNext').addEventListener('click', function() {
     openGal((galIdx + 1) % galData.length);
 });
 
-/*  ESC key closes everything */
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-        closeSearch();
         closeMenuPop();
         closeGal();
-        if (typeof $.magnificPopup !== 'undefined') $.magnificPopup.close();
+
+        if (typeof $.magnificPopup !== 'undefined') {
+            $.magnificPopup.close();
+        }
     }
 });
 
