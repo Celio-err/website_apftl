@@ -17,7 +17,7 @@
          <div class="container">
             <div class="row align-items-center g-5" style="min-height:88vh;">
                <div class="col-lg-6">
-                  <h1 class="htitle">Jovem<span class="hl">Ativismu</span><br/>Sivismu no Voluntarismu</h1>
+                  <h1 class="htitle">Jovem <span class="hl">Ativismu</span><br/>Sivismu no Voluntarismu</h1>
                   <p class="hdesc">Experience bold flavors crafted from premium ingredients. From crispy burgers to gourmet pizzas - every bite is an adventure worth savoring.</p>
                   <div class="d-flex flex-wrap gap-3 mb-2">
                      <a href="#menu" class="btn-red"><i class="fas fa-utensils"></i>Explore Menu</a>
@@ -47,25 +47,8 @@
             </div>
          </div>
       </section>
-      <!-- MARQUEE -->
-      <div class="mqsec">
-         <div class="mqtrack">
-            <div class="mqitem"><i class="fas fa-circle"></i>Crispy Fried Chicken</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Gourmet Burgers</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Artisan Pizzas</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Fresh Wraps &amp; Rolls</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Loaded Fries</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Ice Cream Shakes</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Grilled Sandwiches</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Crispy Fried Chicken</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Gourmet Burgers</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Artisan Pizzas</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Fresh Wraps &amp; Rolls</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Loaded Fries</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Ice Cream Shakes</div>
-            <div class="mqitem"><i class="fas fa-circle"></i>Grilled Sandwiches</div>
-         </div>
-      </div>
+
+
       <!-- CATEGORY -->
       <section id="category">
          <div class="container">
@@ -189,7 +172,7 @@
                <!-- CARD 1: Burgers -->
                <div class="col-sm-6 col-lg-4 mwrap" data-c="burgers" data-aos="fade-up">
                   <div class="mcard"
-                     data-img="img/menu/1.jpg"
+                     data-img="{% static 'main_front_end/img/menu/1.jpg' %}"
                      data-title="Classic Smash Burger"
                      data-cat="Burgers"
                      data-price="$14.99" data-old="$18.99"
@@ -824,7 +807,7 @@
          </div>
       </section>
 	  
-      <!-- ============================================================
+<!-- ============================================================
          FIX 6 � CONTACT FORM
          ============================================================ -->
       <section id="contact-section">
@@ -892,9 +875,6 @@
             </div>
          </div>
       </section>
-	  
-      <!-- FOOTER -->
-          
-	<!-- jQuery -->
+     
   
   {% endblock content %}
