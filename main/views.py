@@ -21,5 +21,11 @@ def login_view(request):
     return render(request, "admin_templates/auth-login.html")
 
 def logout_view(request):
-    logout(request, user)
-    return render (request, "admin_templates/auth-login.html")
+    logout(request)
+    return redirect ('login')
+
+def register_view(request):
+    return render(request, "admin_templates/auth-register.html")
+
+def profile_view(request):
+    return render(request, "admin_templates/profile.html")
