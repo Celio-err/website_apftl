@@ -69,13 +69,13 @@
       </div>
     </section>
  {% endblock %}
+
+{% block extra_js %}
 <!-- JS Libraies -->
   <script src="{% static 'main/bundles/jquery-pwstrength/jquery.pwstrength.min.js' %}"></script>
   <script src="{% static 'main/bundles/jquery-selectric/jquery.selectric.min.js' %}"></script>
   <!-- Page Specific JS File -->
   <script src="{% static 'main/js/page/auth-register.js' %}"></script>
-{% block extra_js %}
-
 {% endblock %}
 
   

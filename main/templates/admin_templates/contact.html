@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'admin_templates/base.html' %}
+{% load static %}
 
+{% block title %}Dashboard - Otika Admin{% endblock %}
 
-<!-- contact.html  21 Nov 2019 04:05:04 GMT -->
-<head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Otika - Admin Dashboard Template</title>
-  <!-- General CSS Files -->
-  <link rel="stylesheet" href="assets/css/app.min.css">
-  <!-- Template CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <!-- Custom style CSS -->
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
-</head>
+{% block sidebar_dashboard_active %}active{% endblock %}
 
-<body>
-  <div class="loader"></div>
-  <div id="app">
+{% block content %}
     <section class="section">
       <div class="container mt-5">
         <div class="row">
@@ -81,20 +67,14 @@
         </div>
       </div>
     </section>
-  </div>
-  <!-- General JS Scripts -->
-  <script src="assets/js/app.min.js"></script>
-  <!-- JS Libraies -->
+{% endblock %}
+
+{% block extra_js %}
+ <!-- JS Libraies -->
   <script src="http://maps.google.com/maps/api/js?key=AIzaSyB55Np3_WsZwUQ9NS7DP-HnneleZLYZDNw&amp;sensor=true"></script>
-  <script src="assets/bundles/gmaps.js"></script>
+  <script src="{% static 'main/bundles/gmaps.js' %}"></script>
   <!-- Page Specific JS File -->
-  <script src="assets/js/page/contact.js"></script>
-  <!-- Template JS File -->
-  <script src="assets/js/scripts.js"></script>
-  <!-- Custom JS File -->
-  <script src="assets/js/custom.js"></script>
-</body>
-
-
-<!-- contact.html  21 Nov 2019 04:05:05 GMT -->
-</html>
+  <script src="{% static 'main/js/page/contact.js' %}"></script>
+{% endblock %}
+ 
+ 

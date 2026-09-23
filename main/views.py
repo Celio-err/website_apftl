@@ -29,3 +29,6 @@ def register_view(request):
 
 def profile_view(request):
     return render(request, "admin_templates/profile.html")
+
+def contact_view(request):
+    return render(request, "admin_templates/contact.html")
